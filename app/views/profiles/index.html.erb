@@ -1,0 +1,60 @@
+
+
+<div class="container-fluid" id="index-page">
+
+  <div class="grid-item-1">
+    <h1 class="profile-name">Profile Page</h1>
+    <button type="button" class="btn btn-outline-info">Edit Profile</button><br>
+    <img src="1327-l.jpg" alt="error" id="dp">
+  </div>  
+
+      
+
+    
+
+  <div class="grid-item-2">
+    <h3 class="title-name">Github</h3>
+    <form action= "profiles#index" method="get">
+      <button name="connect" type="submit" class="btn btn-primary">Connect</button><hr>
+      <div>
+      <% @repos.each do |repo| %>
+        <p style="font-size: 10px">
+        <%= repo.full_name %>
+        </p>
+      <% end %>
+      </div>
+    </form>
+  </div>
+
+  <div class="grid-item-3">
+    <h3 class="title-name">LinkedIn</h3>
+    <form action="#" method="get">
+      <button name="connect" type="submit" value="#" class="btn btn-primary">Connect</button>
+      <button name="disconnect" type="submit" value="#" class="btn btn-danger">Diconnect</button>
+    </form>
+  </div>
+
+  <div class="grid-item-4">
+    <h3 class="title-name">Stackoverflow</h3>
+    <form action="#" method="get">
+      <button name="connect" type="submit" value="#" class="btn btn-primary">Connect</button>
+      <button name="disconnect" type="submit" value="#" class="btn btn-danger">Diconnect</button>
+    </form>
+  </div>
+
+  <div class="grid-item-5">
+    <h3 class="title-name">Random</h3>
+    <form action="#" method="get">
+      <button name="connect" type="submit" value="#" class="btn btn-primary">Connect</button>
+      <button name="disconnect" type="submit" value="#" class="btn btn-danger">Diconnect</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+

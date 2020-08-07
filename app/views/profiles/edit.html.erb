@@ -1,0 +1,20 @@
+
+
+
+<h3>Edit profile</h3>
+
+<form action="#" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="profile[name]" >
+  </div>
+
+  <div class="form-group">
+    <label for="number">PhoneNo</label>
+    <input type="number" class="form-control" id="number" name="profile[phone_no]">
+  </div>
+
+  <input type="submit" value="Create">
+</form>

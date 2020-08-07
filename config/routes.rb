@@ -1,3 +1,17 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+	devise_for :users, controllers: {omniauth_callbacks: 'omniauth'}
+
+	devise_scope :user do
+		unauthenticated do
+			root 'welcomes#index', as: :unauthenticated_root
+		end
+
+		authenticated :user do
+			root 'profiles#index', as: :authenticated_root
+		end
+	end
+	
+	resources :welcomes, only: [:index]
+	resources :profiles
+	resources :github
 end
